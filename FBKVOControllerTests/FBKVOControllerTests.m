@@ -16,6 +16,7 @@
 #import <OCMockito/OCMockito.h>
 
 #import <FBKVOController/FBKVOController.h>
+#import <FBKVOController/NSObject+FBKVOController.h>
 
 #import "FBKVOTesting.h"
 
@@ -269,16 +270,20 @@ static NSKeyValueObservingOptions const optionsAll = optionsBasic | NSKeyValueOb
 {
   FBKVOTestCircle *circle = [FBKVOTestCircle circle];
   id<FBKVOTestObserving> observer = mockProtocol(@protocol(FBKVOTestObserving));
-  __attribute__((objc_precise_lifetime)) FBKVOController *controller = [FBKVOController controllerWithObserver:observer];
+  __attribute__((objc_precise_lifetime)) FBKVOController *controller = nil;
   
-  // add mock observer
-  [controller observe:circle keyPath:radius options:optionsBasic action:@selector(propertyDidChange)];
+  @autoreleasepool {
+    controller = [FBKVOController controllerWithObserver:observer];
   
-  // verify initial
-  [verifyCount(observer, times(1)) propertyDidChange];
-
-  // dealloc controller
-  controller = nil;
+    // add mock observer
+    [controller observe:circle keyPath:radius options:optionsBasic action:@selector(propertyDidChange)];
+    
+    // verify initial
+    [verifyCount(observer, times(1)) propertyDidChange];
+    
+    // dealloc controller
+    controller = nil;
+  }
   
   // mutate
   circle.radius = 1.0;
@@ -295,7 +300,7 @@ static NSKeyValueObservingOptions const optionsAll = optionsBasic | NSKeyValueOb
 
   // add mock observer
   [controller observe:circle keyPath:radius options:optionsBasic action:@selector(propertyDidChange)];
-
+  
   // verify initial
   [verifyCount(observer, times(1)) propertyDidChange];
   

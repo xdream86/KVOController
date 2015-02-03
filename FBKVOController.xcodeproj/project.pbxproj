@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		46B05A2E1A076AD70022AB70 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B05A2D1A076AD70022AB70 /* NSObject+FBKVOController.m */; };
+		46B05A301A076CC40022AB70 /* NSObject+FBKVOController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46B05A2F1A076ADD0022AB70 /* NSObject+FBKVOController.h */; };
 		C2F52F758CAD49A0B9569C07 /* libPods-FBKVOControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEF702BB5574A90B448BF09 /* libPods-FBKVOControllerTests.a */; };
 		EC8BB5AE18A5792D00EB2793 /* FBKVOTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8BB5AD18A5792D00EB2793 /* FBKVOTesting.m */; };
 		ECEA610218A49C620064AFF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEA610118A49C620064AFF4 /* Foundation.framework */; };
@@ -59,6 +61,7 @@
 			dstPath = "$(PRODUCT_NAME)Headers";
 			dstSubfolderSpec = 16;
 			files = (
+				46B05A301A076CC40022AB70 /* NSObject+FBKVOController.h in CopyFiles */,
 				ECEA610718A49C620064AFF4 /* FBKVOController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +69,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		35DB55EBBF554C83A21A0E7D /* Pods-FBKVOControllerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBKVOControllerTests.xcconfig"; path = "Pods/Pods-FBKVOControllerTests.xcconfig"; sourceTree = "<group>"; };
+		14CBB94C87E908D5977AA52D /* Pods-FBKVOControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBKVOControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBKVOControllerTests/Pods-FBKVOControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		23BE7F32E410B31E573B654C /* Pods-FBKVOControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBKVOControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBKVOControllerTests/Pods-FBKVOControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46B05A2D1A076AD70022AB70 /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
+		46B05A2F1A076ADD0022AB70 /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
 		5CEF702BB5574A90B448BF09 /* libPods-FBKVOControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBKVOControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8BB5AC18A5792D00EB2793 /* FBKVOTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOTesting.h; sourceTree = "<group>"; };
 		EC8BB5AD18A5792D00EB2793 /* FBKVOTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOTesting.m; sourceTree = "<group>"; };
@@ -112,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29FD7E1F86281B4E7BCFC05F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23BE7F32E410B31E573B654C /* Pods-FBKVOControllerTests.debug.xcconfig */,
+				14CBB94C87E908D5977AA52D /* Pods-FBKVOControllerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ECEA60F518A49C620064AFF4 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +139,7 @@
 				ECEA611718A49C620064AFF4 /* FBKVOControllerTests */,
 				ECEA610018A49C620064AFF4 /* Frameworks */,
 				ECEA60FF18A49C620064AFF4 /* Products */,
-				35DB55EBBF554C83A21A0E7D /* Pods-FBKVOControllerTests.xcconfig */,
+				29FD7E1F86281B4E7BCFC05F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +166,8 @@
 		ECEA610318A49C620064AFF4 /* FBKVOController */ = {
 			isa = PBXGroup;
 			children = (
+				46B05A2F1A076ADD0022AB70 /* NSObject+FBKVOController.h */,
+				46B05A2D1A076AD70022AB70 /* NSObject+FBKVOController.m */,
 				ECEA610618A49C620064AFF4 /* FBKVOController.h */,
 				ECEA610818A49C620064AFF4 /* FBKVOController.m */,
 				ECEA610418A49C620064AFF4 /* Supporting Files */,
@@ -294,7 +311,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-FBKVOControllerTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBKVOControllerTests/Pods-FBKVOControllerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ECEA612718A49DDD0064AFF4 /* ShellScript */ = {
@@ -330,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B05A2E1A076AD70022AB70 /* NSObject+FBKVOController.m in Sources */,
 				ECEA610918A49C620064AFF4 /* FBKVOController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,7 +492,7 @@
 		};
 		ECEA612518A49C620064AFF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35DB55EBBF554C83A21A0E7D /* Pods-FBKVOControllerTests.xcconfig */;
+			baseConfigurationReference = 23BE7F32E410B31E573B654C /* Pods-FBKVOControllerTests.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -496,7 +514,7 @@
 		};
 		ECEA612618A49C620064AFF4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35DB55EBBF554C83A21A0E7D /* Pods-FBKVOControllerTests.xcconfig */;
+			baseConfigurationReference = 14CBB94C87E908D5977AA52D /* Pods-FBKVOControllerTests.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
